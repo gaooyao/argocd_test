@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-deployment
-  namespace: github
+  namespace: argocd-test
   labels:
     app: hello-k8s-demo
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-k8s
-        image: bigwhite/hello-kubernetes-demo:v0.1
+        image: nginx
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
